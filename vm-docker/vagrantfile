@@ -1,0 +1,16 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+config.vm.define :microproyecto2 do |microproyecto2|
+    microproyecto2.vm.box = "bento/ubuntu-22.04"
+    microproyecto2.vm.network :private_network, ip: "192.168.100.4"
+    microproyecto2.vm.hostname = "microproyecto2"
+    microproyecto2.vm.synced_folder "..", "/home/vagrant/Microproyecto2"
+    microproyecto2.vm.provider "virtualbox" do |v|
+        v.cpus = 2
+        v.memory = 3072
+    end
+  end
+end

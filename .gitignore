@@ -5,3 +5,4 @@ venv/
 *.params
 node_modules/
 .DS_Store
+.vagrant/
