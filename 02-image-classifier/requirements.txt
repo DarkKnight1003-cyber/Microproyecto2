@@ -1,7 +1,3 @@
 flask
-gluoncv
-matplotlib
-mxnet
-opencv-python==4.5.5.64
-requests
 Pillow
+requests

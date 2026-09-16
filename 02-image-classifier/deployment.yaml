@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clasificador-imagenes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clasificador-imagenes
+  template:
+    metadata:
+      labels:
+        app: clasificador-imagenes
+    spec:
+      containers:
+      - name: clasificador-imagenes
+        image: acrmicroproyecto2jea.azurecr.io/clasificador-imagenes:v1
+        ports:
+        - containerPort: 5000
+        resources:
+          requests:
+            cpu: "100m"
+          limits:
+            cpu: "250m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: clasificador-imagenes-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: clasificador-imagenes
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000
