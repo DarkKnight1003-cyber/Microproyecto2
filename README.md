@@ -130,7 +130,7 @@ El Container Registry y el workspace de monitoreo se conservan, así que no hace
 
 ## Autores
 
-Juan Esteban Aristizábal - 22601265
-Juan Felipe Lopez - 22615417
-John Angel Posso - 22615413
+- Juan Esteban Aristizábal - 22601265
+- Juan Felipe Lopez - 22615417
+- John Angel Posso - 22615413
 
